@@ -19,6 +19,15 @@ class Checkout extends ConsumerWidget {
           padding: const EdgeInsets.all(20.0),
           child: Row(
             children: [
+              IconButton(
+                icon: const Icon(Icons.cleaning_services),
+                onPressed: () {
+                  cart.clear();
+                },
+              ),
+              SizedBox(
+                width: 30,
+              ),
               Text('Total : ${cart.totalPrice}'),
             ],
           ),
@@ -29,15 +38,14 @@ class Checkout extends ConsumerWidget {
           itemCount: cart.item.length,
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text(cart.item[index].name),
-              subtitle: Text('${cart.item[index].price}'),
-              trailing: IconButton(
+                title: Text(cart.item[index].name),
+                subtitle: Text('${cart.item[index].price}'),
+                trailing: IconButton(
                   icon: const Icon(Icons.delete),
                   onPressed: () {
                     cart.remove(cart.item[index]);
                   },
-                )
-            );
+                ));
           },
         ),
       ),

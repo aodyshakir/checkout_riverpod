@@ -29,5 +29,11 @@ class CartModel extends ChangeNotifier {
     return _totalPrice;
   }
 
+  void clear() {
+    _item.clear();
+    _totalPrice = 0.0;
+    notifyListeners();
+  }
+
  
 }
