@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../model/cart.dart';
+import '../state_managment/network_managment.dart';
 
-final cartProvider = ChangeNotifierProvider<CartModel>((ref) {
-  return CartModel();
-});
 
 class Checkout extends ConsumerWidget {
   const Checkout({Key? key}) : super(key: key);

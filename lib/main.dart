@@ -4,7 +4,6 @@ import 'screens/checkout.dart';
 import 'screens/home.dart';
 
 
-
 void main() {
   runApp(const ProviderScope(child: MyApp()));
 }

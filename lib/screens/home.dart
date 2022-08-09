@@ -1,7 +1,8 @@
-import 'package:checkout_riverpod/screens/checkout.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../model/item.dart';
+import '../state_managment/network_managment.dart';
 
 class MyHomePage extends ConsumerWidget {
   MyHomePage({Key? key}) : super(key: key);
